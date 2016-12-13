@@ -1,14 +1,14 @@
 require 'hobby'
+require 'hobby/json'
 
 class App
   include Hobby::App
-  use Rack::ContentType, 'application/json'
+  include Hobby::JSON
 
   post '/event' do
     begin
-      text = (JSON.parse request.body.read)['text']
       response.status = 201
-      { id: self.class.name, text: (reverse text) }.to_json
+      { id: self.class.name, text: (reverse json['text']) }
     rescue
       response.status = 417
     end
@@ -17,4 +17,7 @@ class App
   def reverse text
     text.reverse
   end
+
+
+  get '/echo' do json end
 end

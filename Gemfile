@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'hobby'
+gem 'hobby-json'
 gem 'devtools'
 gem 'minitest'
 gem 'minitest-power_assert'

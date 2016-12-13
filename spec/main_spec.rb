@@ -40,4 +40,11 @@ describe App do
     assert { json['id'] == 'App' }
     assert { json['text'] == 'txet' }
   end
+
+  it do
+    connection = Excon.new 'unix:///', socket: "#{@child_pid}.socket"
+    response = connection.get path: '/echo', body: {text: 'text'}.to_json
+    json = JSON.parse response.body
+    assert { json['text'] == 'text' }
+  end
 end
