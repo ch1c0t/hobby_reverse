@@ -1,3 +1,8 @@
+PATH
+  remote: ../testo-test
+  specs:
+    testo-test (0.0.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -15,6 +20,7 @@ GEM
       descendants_tracker (~> 0.0.4)
       ice_nine (~> 0.11.0)
       thread_safe (~> 0.3, >= 0.3.1)
+    byebug (9.0.6)
     codeclimate-engine-rb (0.4.0)
       virtus (~> 1.0)
     coderay (1.1.1)
@@ -109,8 +115,13 @@ GEM
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
       slop (~> 3.4)
+    pry-byebug (3.4.2)
+      byebug (~> 9.0)
+      pry (~> 0.10)
     puma (3.6.2)
     rack (2.0.1)
+    rack-test (0.6.3)
+      rack (>= 1.0)
     rainbow (2.2.1)
     rake (11.3.0)
     reek (4.5.4)
@@ -181,7 +192,10 @@ DEPENDENCIES
   minitest
   minitest-power_assert
   pry
+  pry-byebug
   puma
+  rack-test
+  testo-test!
 
 BUNDLED WITH
-   1.14.3
+   1.14.5

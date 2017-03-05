@@ -9,3 +9,7 @@ gem 'pry'
 gem 'awesome_print'
 gem 'puma'
 gem 'excon'
+
+gem 'testo-test', path: '../testo-test'
+gem 'rack-test'
+gem 'pry-byebug'
