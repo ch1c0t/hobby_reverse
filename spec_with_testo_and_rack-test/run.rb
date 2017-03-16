@@ -21,12 +21,6 @@ test = Test.new do
 end
 
 require 'pry'
+report = test[:anything]
 binding.pry
-test
-
-#[3] pry(main)> report.debug
-#RuntimeError: You want to finish 4 frames, but stack size is only 1
-#from /home/ch1c0t/.gem/ruby/2.4.0/gems/pry-byebug-3.4.2/lib/byebug/processors/pry_processor.rb:18:in `step_out'`
-#
-# wtf?
-# TODO: find out debugging doesn't work here
+report.debug
